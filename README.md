@@ -19,7 +19,6 @@ NYC Access is a public web app that shows how reliable New York City subway elev
 | `submission/api.py` | **Backend** (final). A single-file Python web app built on Starlette and uvicorn. |
 | `submission/about.html` | **About page** (final). Covers the dataset, methodology, infrastructure, API reference and prompt spec. |
 | `submission/README.md` | Which file goes in which upload section, plus what changed in the final version. |
-| `api (2).py`, `nyc-access g04.html`, `group4 modified.html`, `*.pyc` | Earlier uploads, kept for reference. |
 
 ## What the app does
 
