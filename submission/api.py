@@ -229,6 +229,13 @@ async def About(request):
     return HTMLResponse("<p>about.html is not on this server yet.</p>", status_code=404)
 
 
+async def DemoVideo(request):
+    video = HERE / "demo_urban.mp4"
+    if video.exists():
+        return FileResponse(video, media_type="video/mp4")
+    return Response("Demo video not found.", status_code=404)
+
+
 # ---------------------------------------------------------------- JSON API
 
 @api
@@ -979,6 +986,7 @@ async def lifespan(app):
 routes = [
     Route("/", Home, methods=["GET"]),
     Route("/about.html", About, methods=["GET"]),
+    Route("/demo_urban.mp4", DemoVideo, methods=["GET", "HEAD"]),
     Route("/api/health", Health, methods=["GET"]),
     Route("/api/meta", Meta, methods=["GET"]),
     Route("/api/stations", Stations, methods=["GET"]),
